@@ -3,10 +3,12 @@ package com.felps.cursomc.services;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import com.felps.cursomc.domain.Categoria;
 import com.felps.cursomc.repositories.CategoriaRepository;
+import com.felps.cursomc.services.exceptions.DataIntegrityException;
 import com.felps.cursomc.services.exceptions.ObjectNotFoundException;
 
 @Service
@@ -20,6 +22,15 @@ public class CategoriaService {
 		Optional<Categoria> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
 				 "Objeto não encontrado! Id: " + id + ", Tipo: " + Categoria.class.getName()));
+	}
+	
+	public void delete(Integer id) {
+		find(id);
+		try {
+			repo.deleteById(id);
+		}catch (DataIntegrityViolationException e) {
+			throw new DataIntegrityException("Não é possível excluir uma categoria que possui produtos");
+		}
 	}
 	
 	public Categoria insert(Categoria obj) {
