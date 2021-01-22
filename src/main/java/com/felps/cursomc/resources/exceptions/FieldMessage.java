@@ -32,8 +32,4 @@ public class FieldMessage implements Serializable {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> d37786b44b564a5ac67fda76ce267eae3dc03e9a
