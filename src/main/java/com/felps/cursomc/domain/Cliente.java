@@ -6,7 +6,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+<<<<<<< HEAD
 import javax.persistence.CascadeType;
+=======
+>>>>>>> d37786b44b564a5ac67fda76ce267eae3dc03e9a
 import javax.persistence.CollectionTable;
 import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
@@ -30,7 +33,11 @@ public class Cliente implements Serializable {
 	private String cpfOuCnpj;
 	private Integer tipo;
 	
+<<<<<<< HEAD
 	@OneToMany(mappedBy="cliente", cascade=CascadeType.ALL)
+=======
+	@OneToMany(mappedBy="cliente")
+>>>>>>> d37786b44b564a5ac67fda76ce267eae3dc03e9a
 	private List<Endereco> enderecos = new ArrayList<>();
 	
 	@ElementCollection

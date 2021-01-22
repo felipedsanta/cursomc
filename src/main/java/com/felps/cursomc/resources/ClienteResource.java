@@ -1,6 +1,9 @@
 package com.felps.cursomc.resources;
 
+<<<<<<< HEAD
 import java.net.URI;
+=======
+>>>>>>> d37786b44b564a5ac67fda76ce267eae3dc03e9a
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,11 +18,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+<<<<<<< HEAD
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.felps.cursomc.domain.Cliente;
 import com.felps.cursomc.dto.ClienteDTO;
 import com.felps.cursomc.dto.ClienteNewDTO;
+=======
+
+import com.felps.cursomc.domain.Cliente;
+import com.felps.cursomc.dto.ClienteDTO;
+>>>>>>> d37786b44b564a5ac67fda76ce267eae3dc03e9a
 import com.felps.cursomc.services.ClienteService;
 
 @RestController
@@ -36,6 +45,7 @@ public class ClienteResource {
 		return ResponseEntity.ok().body(obj);
 	}
 	
+<<<<<<< HEAD
 	@RequestMapping(method=RequestMethod.POST)
 	public ResponseEntity<Void> insert(@Valid @RequestBody ClienteNewDTO objDto) {
 	Cliente obj = service.fromDTO(objDto);
@@ -45,6 +55,8 @@ public class ClienteResource {
 	return ResponseEntity.created(uri).build();
 }
 	
+=======
+>>>>>>> d37786b44b564a5ac67fda76ce267eae3dc03e9a
 	@RequestMapping(value="/{id}", method=RequestMethod.PUT )
 	public ResponseEntity<Void> update(@Valid @RequestBody ClienteDTO objDto, @PathVariable Integer id){
 		Cliente obj = service.fromDTO(objDto);

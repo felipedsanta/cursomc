@@ -9,6 +9,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
+<<<<<<< HEAD
 import org.springframework.transaction.annotation.Transactional;
 
 import com.felps.cursomc.domain.Cidade;
@@ -19,12 +20,19 @@ import com.felps.cursomc.dto.ClienteDTO;
 import com.felps.cursomc.dto.ClienteNewDTO;
 import com.felps.cursomc.repositories.ClienteRepository;
 import com.felps.cursomc.repositories.EnderecoRepository;
+=======
+
+import com.felps.cursomc.domain.Cliente;
+import com.felps.cursomc.dto.ClienteDTO;
+import com.felps.cursomc.repositories.ClienteRepository;
+>>>>>>> d37786b44b564a5ac67fda76ce267eae3dc03e9a
 import com.felps.cursomc.services.exceptions.DataIntegrityException;
 import com.felps.cursomc.services.exceptions.ObjectNotFoundException;
 
 @Service
 public class ClienteService {
 	
+<<<<<<< HEAD
 	
 	@Autowired
 	private ClienteRepository repo;
@@ -33,12 +41,18 @@ public class ClienteService {
 	private EnderecoRepository enderecoRepository;
 	
 	
+=======
+	@Autowired
+	private ClienteRepository repo;
+	
+>>>>>>> d37786b44b564a5ac67fda76ce267eae3dc03e9a
 	public Cliente find(Integer id) {
 		Optional<Cliente> obj = repo.findById(id);
 		return obj.orElseThrow(() -> new ObjectNotFoundException(
 				 "Objeto não encontrado! Id: " + id + ", Tipo: " + Cliente.class.getName()));
 	}
 	
+<<<<<<< HEAD
 	@Transactional
 	public Cliente insert(Cliente obj) {
 		obj.setId(null);
@@ -46,6 +60,8 @@ public class ClienteService {
 		enderecoRepository.saveAll(obj.getEnderecos());
 		return obj;
 	}
+=======
+>>>>>>> d37786b44b564a5ac67fda76ce267eae3dc03e9a
 	
 	public Cliente update(Cliente obj) {
 		Cliente newObj = find(obj.getId());
@@ -75,6 +91,7 @@ public class ClienteService {
 		return new Cliente(objDto.getId(), objDto.getNome(), objDto.getEmail(), null, null);
 	}
 	
+<<<<<<< HEAD
 	public Cliente fromDTO(ClienteNewDTO objDto) {
 		Cliente cli = new Cliente(null, objDto.getNome(), objDto.getEmail(), objDto.getCpfOuCnpj(), TipoCliente.toEnum(objDto.getTipo()));
 		Cidade cid = new Cidade(objDto.getCidadeId(), null, null);
@@ -91,6 +108,8 @@ public class ClienteService {
 		return cli;
 	}
 	
+=======
+>>>>>>> d37786b44b564a5ac67fda76ce267eae3dc03e9a
 	private void updateData(Cliente newObj, Cliente obj) {
 		newObj.setNome(obj.getNome());
 		newObj.setEmail(obj.getEmail());
