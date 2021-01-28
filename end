@@ -1,0 +1,27 @@
+[33mbfe8b2f[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m funcionando
+[33mf1abe92[m teste
+[33m9a80580[m validacao cpf ou cnpj
+[33m3f57f84[m validacao cpf ou cnpj no cliente
+[33m5122f12[m Validação customizada CPF ou CNPJ no cliente
+[33md37786b[m Correcoes: update na categoriaService e construtor de Pagemento
+[33m48bc80b[m PUT, DELETE E GET PARA CLIENTE
+[33m3d40439[m Validacao com Bin
+[33m989ff61[m Paginacao com parametros opnionais na requisicao
+[33mf53ce61[m Listando todas as categorias com DTO
+[33m852aa11[m Deletando uma categoria com DELETE
+[33m6717c99[m Atualizando categoria PUT
+[33m25f550b[m Inserindo uma nova categoria com POST
+[33mff715ba[m Endpoint /pedidos/{id} Disponivel
+[33m930e485[m ItemPedido e ItemPedidoPK
+[33mc997837[m Pedido, pagamento e estadoPagamento
+[33m4d345ec[m Endpoints /clientes/{id} disponivel
+[33m9df9d9c[m Cliente, tipocliente,  telefones e enderecos
+[33mfbd105d[m Estado e cidade
+[33mdb30da1[m Ajustes no endpoint /categorias/{id}
+[33me54d639[m Produto e associacao muitos para muitos
+[33md8636aa[m Criando operacao de instanciacao
+[33mc9c3f3c[m Criando repository e service para categoria
+[33mffb2869[m Banco de dados h2 e criacao automatica base de dados
+[33m9bdf731[m Testando classe dominio - Categoria
+[33m2624db7[m Testando o Rest
+[33mde2c374[m Projeto criado

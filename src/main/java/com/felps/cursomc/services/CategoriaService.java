@@ -11,10 +11,6 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.felps.cursomc.domain.Categoria;
-<<<<<<< HEAD
-=======
-import com.felps.cursomc.domain.Cliente;
->>>>>>> d37786b44b564a5ac67fda76ce267eae3dc03e9a
 import com.felps.cursomc.dto.CategoriaDTO;
 import com.felps.cursomc.repositories.CategoriaRepository;
 import com.felps.cursomc.services.exceptions.DataIntegrityException;
