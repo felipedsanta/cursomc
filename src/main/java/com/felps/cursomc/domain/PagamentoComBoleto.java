@@ -7,8 +7,10 @@ import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.felps.cursomc.domain.enums.EstadoPagamento;
 
+@JsonTypeName("pagamentoComBoleto")
 @Entity
 public class PagamentoComBoleto extends Pagamento implements Serializable {
 	private static final long serialVersionUID = 1L;

@@ -10,7 +10,6 @@ import org.springframework.data.domain.Sort.Direction;
 import org.springframework.stereotype.Service;
 
 import com.felps.cursomc.domain.Categoria;
-import com.felps.cursomc.domain.Pedido;
 import com.felps.cursomc.domain.Produto;
 import com.felps.cursomc.repositories.CategoriaRepository;
 import com.felps.cursomc.repositories.ProdutoRepository;
